@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "91430342728",
+    "project_id": "taugordriveapp",
+    "storage_bucket": "taugordriveapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91430342728:android:3fabb7c8b4810da98ec87d",
+        "android_client_info": {
+          "package_name": "com.ytecomerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91430342728-1urg0ar5e3no1lcmvvld0rsf0uqkiter.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ytecomerce",
+            "certificate_hash": "98ba11a58af110dc6d20c0dff49cd2ca6552d1d8"
+          }
+        },
+        {
+          "client_id": "91430342728-agsjck5fb7qar4ttp5jlhirpja8vkdmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-qX8WYXbS115vS3E5t7lxonObjXQyiyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91430342728-agsjck5fb7qar4ttp5jlhirpja8vkdmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
