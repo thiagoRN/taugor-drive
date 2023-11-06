@@ -17,17 +17,19 @@ export default function RoundButtonComp({
           paddingHorizontal: 10,
           paddingVertical: 10,
           borderRadius: 15,
-          borderColor: 'black',
+          borderColor: 'white',
           borderWidth: border ? 1 : 0,
-          height:50,
+          height: 55,
           alignItems: 'center',
           justifyContent: 'center',
+          margin: 10,
         }}>
         <Text
           style={{
             color: border ? 'black' : 'white',
             fontWeight: 'bold',
             textAlign: 'center',
+            fontSize: 24,
           }}>
           {label}
         </Text>
@@ -35,12 +37,3 @@ export default function RoundButtonComp({
     </TouchableOpacity>
   );
 }
-
-// height: 50,
-//                 width: 150,
-//                 backgroundColor: '#79c108',
-//                 color: '#efefef',
-//                 alignItems: 'center',
-//                 justifyContent: 'center',
-//                 borderRadius: 15,
-//                 fontWeight: 'bold',

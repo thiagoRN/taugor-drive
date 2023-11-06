@@ -37,7 +37,6 @@ function UploadScreen() {
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
         console.log('Você pode usar armazenamento');
-        getAllFolders(currentPath);
       } else {
         console.log('Permissão da câmera negada');
       }

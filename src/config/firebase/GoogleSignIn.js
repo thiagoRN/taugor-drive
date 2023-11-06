@@ -6,12 +6,12 @@ export const _signInWithGoogle = async () => {
     GoogleSignin.configure({
       offlineAccess: false,
       webClientId:
-        '992080593531-k6fmujbk93blonhe9h0c0hornd4tn0eo.apps.googleusercontent.com',
+        '91430342728-agsjck5fb7qar4ttp5jlhirpja8vkdmq.apps.googleusercontent.com',
       scopes: ['profile', 'email'],
     });
     await GoogleSignin.hasPlayServices();
     const userInfo = await GoogleSignin.signIn();
-
+    console.log(userInfo);
     const {idToken} = await GoogleSignin.signIn();
     const googleCredentials = auth.GoogleAuthProvider.credential(idToken);
     auth().signInWithCredential(googleCredentials);

@@ -7,11 +7,11 @@ export default function FullRoundButtonComp({image, bg, onPress}) {
       <View
         style={{
           backgroundColor: bg,
-          width: 50,
-          height: 50,
+          width: 155,
+          height: 55,
           justifyContent: 'center',
           alignItems: 'center',
-          borderRadius: 25,
+          borderRadius: 15,
           marginLeft: 10,
         }}>
         <Image source={image} style={{width: 20, height: 20}} />

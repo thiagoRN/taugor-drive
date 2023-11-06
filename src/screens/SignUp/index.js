@@ -13,11 +13,11 @@ export default function SignUpScreen({navigation}) {
     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
 
     if (reg.test(email) === false) {
-      toastMessage('error', 'Please provide a valid email');
+      toastMessage('error', 'Por favor forneça um email válido');
       return;
     }
     if (!password) {
-      toastMessage('error', 'Please provide password');
+      toastMessage('error', 'Por favor forneça uma senha');
       return;
     }
 
@@ -26,6 +26,7 @@ export default function SignUpScreen({navigation}) {
       .then(data => {
         const {uid} = data.user;
         toastMessage('error', 'Registrado');
+        navigation.navigate('SiginIn');
         return uid;
       })
       .catch(error => {
@@ -42,40 +43,41 @@ export default function SignUpScreen({navigation}) {
   }
 
   return (
-    <View style={{flex: 1, backgroundColor: '#efefef', padding: 15}}>
+    <View style={{flex: 1, backgroundColor: '#efefef', padding: 10}}>
       <View style={{flex: 0.5, alignItems: 'center', justifyContent: 'center'}}>
         <Image
           style={{
-            width: 150,
-            height: 130,
+            width: 340,
+            height: 100,
+            objectFit: 'scale-down',
+            marginTop: 5,
           }}
-          resizeMode={'cover'}
-          source={require('../../assets/logo2.png')}
+          source={require('../../assets/logo4.png')}
         />
       </View>
-      <View style={{flex: 0.5, backgroundColor: '#efefef'}}>
-        <Text
-          style={{
-            fontSize: 30,
-            color: 'black',
-            fontWeight: 'bold',
-            marginLeft: 10,
-            marginBottom: 60,
-          }}>
-          Sing Up
-        </Text>
-        <View style={{flex: 1, justifyContent: 'center'}}>
+      <View style={{flex: 1, backgroundColor: '#efefef'}}>
+        <View style={{flex: 4, justifyContent: 'center'}}>
+          <Text
+            style={{
+              fontSize: 30,
+              color: 'black',
+              fontWeight: 'bold',
+              marginLeft: 10,
+              marginBottom: 10,
+            }}>
+            Criar Conta
+          </Text>
           <InputFieldComp
             placeholder={'email'}
             keyboardType={'email-address'}
             onChangeText={text => setEmail(text)}
           />
           <InputFieldComp
-            placeholder={'password'}
+            placeholder={'senha'}
             secureTextEntry={true}
             onChangeText={text => setPassword(text)}
           />
-          <RoundButtonComp label={'SignUp'} onPress={() => signUp()} />
+          <RoundButtonComp label={'Criar'} onPress={() => signUp()} />
         </View>
       </View>
     </View>

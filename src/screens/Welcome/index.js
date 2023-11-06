@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
+import RoundButtonComp from '../../components/RoundButtonComp';
 
 export default function WelcomeScreen({navigation}) {
   return (
@@ -50,40 +51,18 @@ export default function WelcomeScreen({navigation}) {
               justifyContent: 'space-evenly',
               flexDirection: 'row',
             }}>
-            <TouchableOpacity
-              style={{
-                height: 50,
-                width: 150,
-                backgroundColor: '#efefef',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 15,
-                marginRight: 15,
-              }}>
-              <Text
-                onPress={() => navigation.navigate('SignUpScreen')}
-                style={{fontWeight: 'bold', fontSize: 20, color: '#79c108'}}>
-                Criar conta
-              </Text>
-            </TouchableOpacity>
+            <RoundButtonComp
+              label={'Criar conta'}
+              border={true}
+              width={150}
+              onPress={() => navigation.navigate('SignUp')}
+            />
 
-            <TouchableOpacity
-              style={{
-                height: 50,
-                width: 150,
-                backgroundColor: '#79c108',
-                alignItems: 'center',
-                color: '#efefef',
-                justifyContent: 'center',
-                borderRadius: 15,
-                fontWeight: 'bold',
-              }}>
-              <Text
-                onPress={() => navigation.navigate('SiginIn')}
-                style={{fontWeight: 'bold', fontSize: 20, color: '#e0d8d5'}}>
-                Entrar
-              </Text>
-            </TouchableOpacity>
+            <RoundButtonComp
+              label={'Entrar'}
+              width={150}
+              onPress={() => navigation.navigate('SiginIn')}
+            />
           </View>
         </View>
       </View>

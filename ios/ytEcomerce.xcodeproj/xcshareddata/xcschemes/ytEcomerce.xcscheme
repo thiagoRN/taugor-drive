@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ytEcomerce.app"
-               BlueprintName = "ytEcomerce"
-               ReferencedContainer = "container:ytEcomerce.xcodeproj">
+               BuildableName = "taugor.drive.app"
+               BlueprintName = "taugor.drive"
+               ReferencedContainer = "container:taugor.drive.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ytEcomerceTests.xctest"
-               BlueprintName = "ytEcomerceTests"
-               ReferencedContainer = "container:ytEcomerce.xcodeproj">
+               BuildableName = "taugor.driveTests.xctest"
+               BlueprintName = "taugor.driveTests"
+               ReferencedContainer = "container:taugor.drive.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ytEcomerce.app"
-            BlueprintName = "ytEcomerce"
-            ReferencedContainer = "container:ytEcomerce.xcodeproj">
+            BuildableName = "taugor.drive.app"
+            BlueprintName = "taugor.drive"
+            ReferencedContainer = "container:taugor.drive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ytEcomerce.app"
-            BlueprintName = "ytEcomerce"
-            ReferencedContainer = "container:ytEcomerce.xcodeproj">
+            BuildableName = "taugor.drive.app"
+            BlueprintName = "taugor.drive"
+            ReferencedContainer = "container:taugor.drive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -9,15 +9,15 @@
       "client_info": {
         "mobilesdk_app_id": "1:91430342728:android:3fabb7c8b4810da98ec87d",
         "android_client_info": {
-          "package_name": "com.ytecomerce"
+          "package_name": "com.taugor.drive"
         }
       },
       "oauth_client": [
         {
-          "client_id": "91430342728-1urg0ar5e3no1lcmvvld0rsf0uqkiter.apps.googleusercontent.com",
+          "client_id": "91430342728-530d5ib9eo2vs552iagf03pp2no0l22h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.ytecomerce",
+            "package_name": "com.taugor.drive",
             "certificate_hash": "98ba11a58af110dc6d20c0dff49cd2ca6552d1d8"
           }
         },

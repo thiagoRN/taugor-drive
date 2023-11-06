@@ -2,5 +2,6 @@
     "cSpell.words": [
         "fullname",
         "RNFS"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

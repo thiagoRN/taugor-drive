@@ -3,9 +3,6 @@ import React from 'react';
 import RoundButtonComp from '../../components/RoundButtonComp';
 import FullRoundButtonComp from '../../components/FullRoundButtonComp';
 import {_signInWithGoogle} from '../../config/firebase/GoogleSignIn';
-import {toastMessage} from '../../config/AppTost';
-import {axiosClient, SIGN_IN} from '../../config/api';
-import {_storeIntoAsyncStorage} from '../../config/asyncStorage';
 import InputFieldComp from '../../components/InputFieldComp';
 import auth from '@react-native-firebase/auth';
 
@@ -22,75 +19,48 @@ export default function SiginInScreen({navigation}) {
     _signInWithGoogle().then(data => {
       if (!data) {
         console.log('=>Error:', 'No Data');
+        navigation.navigate('Home');
         return;
       }
-      _sign_in_api(data);
+      // _sign_in_api(data);
     });
   }
 
-  async function _sign_in_api(googleData) {
-    setLoading(true);
-    const apiParams = {
-      loginSource: 'google',
-      sid: googleData.user.id,
-      name: googleData.user.name,
-      email: googleData.user.email,
-      profileImage: googleData.user.photo,
-      fcmToken: 'fcm_110220',
-    };
-    const {data, status} = await axiosClient.post(SIGN_IN, apiParams);
-    setLoading(false);
-    console.log(data);
-    if (status == 200) {
-      if (data.status === '200') {
-        console.log('=> Success: ', data);
-        toastMessage('success', data.message);
-        _storeIntoAsyncStorage('user', JSON.stringify(data));
-        navigation.navigate('Home');
-      } else {
-        toastMessage('error', data.message);
-      }
-    } else {
-      toastMessage('error', 'Error in Sign In API');
-    }
-  }
-
   const signin = () => {
-    console.log(email);
-    console.log(password);
     return auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        console.log(auth().currentUser.uid);
-        console.log('logou');
         navigation.navigate('Home');
+        setLoading(true);
       })
-      .catch(err => alert(err.code, err.message));
+      .catch(err => alert('Login ou senha incorretas'));
   };
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: '#efefef'}}>
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         <Image
           source={require('../../assets/logo2.png')}
-          style={{height: 200, width: 200, objectFit: 'scale-down'}}
+          style={{height: 150, width: 150, objectFit: 'scale-down'}}
         />
 
         <Text
           style={{
             textAlign: 'center',
+            fontSize: 20,
+            color: '#000000',
           }}>
           Bem vindo ao Taugor Drive
         </Text>
       </View>
-      <View style={{flex: 1, backgroundColor: '#efefef', marginTop: 60}}>
+      <View style={{flex: 1, marginTop: 20}}>
         <InputFieldComp
-          placeholder={'email'}
+          placeholder={'Email'}
           keyboardType={'email-address'}
           onChangeText={text => setEmail(text)}
         />
         <InputFieldComp
-          placeholder={'password'}
+          placeholder={'Senha'}
           secureTextEntry={true}
           onChangeText={text => setPassword(text)}
         />
@@ -111,7 +81,7 @@ export default function SiginInScreen({navigation}) {
             label={'Sign Up'}
             border={true}
             width={150}
-            onPress={() => navigation.navigate('SignUpScreen')}
+            onPress={() => navigation.navigate('SignUp')}
           />
         </View>
 
@@ -126,8 +96,10 @@ export default function SiginInScreen({navigation}) {
             style={{
               textAlign: 'center',
               marginTop: 20,
+              fontSize: 20,
+              color: '#000000',
             }}>
-            Ou faça login pelo Google
+            Faça login pelo Google
           </Text>
           <View
             style={{

@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface ytEcomerceTests : XCTestCase
+@interface taugor.driveTests : XCTestCase
 
 @end
 
-@implementation ytEcomerceTests
+@implementation taugor.driveTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {
