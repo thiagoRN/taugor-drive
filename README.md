@@ -8,9 +8,6 @@
 </p>
 </br></br></br>
 
-<p align="center">
-    <img  src="src/assets/SS3.jpg"> 
-</p>
 
 
 <h2>Projeto</h2>
